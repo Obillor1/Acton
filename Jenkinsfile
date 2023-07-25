@@ -2,7 +2,7 @@ pipeline {
   agent any 
   stages {
     stage ('Docker build') {
-      step {
+      steps {
       sh 'docker build -t obillor1/newrepo:v1 .'
       }
     }
