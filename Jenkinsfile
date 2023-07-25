@@ -10,7 +10,7 @@ pipeline {
         
     stage ('Build Image') {
       steps {
-        sh 'docker build -t obillor1/osoimg:v1 .'
+        sh 'docker build -t obillor1/newrepo:v1 .'
       }
     }
     stage ('Publish Image') {
