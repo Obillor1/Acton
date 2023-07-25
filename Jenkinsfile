@@ -4,8 +4,8 @@ pipeline {
      stage('Build and Push Image') {
        steps {
         withDockerRegistry([ credentialsId: "obillor1", url: "" ]) {
-        sh 'docker build -t obillor1/newrepo:v1 .'
-        sh 'docker push obillor1/newrepo:v1'
+        sh "docker build -t obillor1/newrepo:v1 ."
+        sh "docker push obillor1/newrepo:v1"
         }
        }
      }
