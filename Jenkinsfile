@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Docker build') {
       step {
-      sh "docker build -t obillor1/newrepo:v1 ."
+      sh 'docker build -t obillor1/newrepo:v1 .'
       }
     }
      stage('Login and Push Image') {
