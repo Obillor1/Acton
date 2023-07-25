@@ -15,7 +15,7 @@ pipeline {
     }
     stage ('Publish Image') {
       steps {
-        sh 'docker push obillor1/osoimg:v1'
+        sh 'docker push obillor1/newrepo:v1'
       }
     }
     stage ('Remove unwanted Images'){
