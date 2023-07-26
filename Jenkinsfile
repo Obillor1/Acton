@@ -11,6 +11,11 @@ pipeline {
         sh 'printenv'
       }
     }
+      stage ('apt update') {
+      steps {
+        sh 'sudo yum update'
+      }
+    }
      stage('Login and Push Image') {
        steps {
         withDockerRegistry([ credentialsId: "obillor1", url: "" ]) {
