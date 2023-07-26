@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Docker build') {
       steps {
-      sh 'docker build -t obillor1/newrepo:v1 .'
+      sh 'docker build -t obillor1/newrepo:${BUILD_ID} .'
       }
     }
     stage ('Get Environment variable') {
@@ -14,7 +14,7 @@ pipeline {
      stage('Login and Push Image') {
        steps {
         withDockerRegistry([ credentialsId: "obillor1", url: "" ]) {
-        sh "docker push obillor1/newrepo:v1"
+        sh "docker push obillor1/newrepo:${BUILD_ID}"
         }
        }
      }
