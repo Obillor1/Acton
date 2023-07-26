@@ -6,6 +6,11 @@ pipeline {
       sh 'docker build -t obillor1/newrepo:v1 .'
       }
     }
+    stage ('Get Environment variable') {
+      steps {
+        sh 'printenv'
+      }
+    }
      stage('Login and Push Image') {
        steps {
         withDockerRegistry([ credentialsId: "obillor1", url: "" ]) {
