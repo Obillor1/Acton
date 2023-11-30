@@ -3,7 +3,7 @@ pipeline {
   stages {
     stage ('Docker build') {
       steps {
-      sh 'docker build -t obillor1/newrepo:${BUILD_ID} .'
+      sh 'docker build -t obillor1/appsrt:${BUILD_ID} .'
       }
     }
     stage ('Get Environment variable') {
