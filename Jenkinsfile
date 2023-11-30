@@ -14,7 +14,7 @@ pipeline {
      stage('Login and Push Image') {
        steps {
         withDockerRegistry([ credentialsId: "obillor1", url: "" ]) {
-        sh "docker push obillor1/newrepo:${BUILD_ID}"
+        sh "docker push obillor1/nappsrt:${BUILD_ID}"
         }
        }
      }
