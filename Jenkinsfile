@@ -23,11 +23,6 @@ pipeline {
         sh 'docker rmi -f $(docker images -q)'
       }
     }
-    stage ('install apache httpd'){
-      steps {
-        sh 'sudo yum install httpd'
-      }
-    }
   }
 }
 
